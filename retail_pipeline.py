@@ -272,5 +272,3 @@ if __name__ == "__main__":
     # )
 
     print("Done.")
-      model = joblib.load('Retail_Inventory_Model.pkl')
-joblib.dump(model,'Retail_Inventory_Model.pkl')
