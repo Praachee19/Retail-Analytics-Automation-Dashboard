@@ -5,7 +5,7 @@
 import os
 import random
 from datetime import datetime, timedelta
-
+import joblib
 import numpy as np
 import pandas as pd
 
@@ -272,4 +272,5 @@ if __name__ == "__main__":
     # )
 
     print("Done.")
-      
+      model = joblib.load('Retail_Inventory_Model.pkl')
+joblib.dump(model,'Retail_Inventory_Model.pkl')

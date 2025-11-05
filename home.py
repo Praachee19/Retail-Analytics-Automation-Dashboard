@@ -1,7 +1,7 @@
 # Home.py
 import streamlit as st
 from app_utils import load_dataset
-
+import joblib
 st.set_page_config(page_title="Retail Analytics Suite", layout="wide")
 
 st.title("Retail Analytics Suite")
@@ -17,3 +17,6 @@ try:
 except Exception as e:
     st.error(str(e))
     st.info("Run. python retail_pipeline.py")
+
+    model = joblib.load('Home_Model.pkl')
+joblib.dump(model,'Home_Model.pkl')
